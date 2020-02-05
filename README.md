@@ -92,8 +92,12 @@ ALLOWED_HOSTS = ['*']  ＃在这里请求的host添加了*
 如果你想使用其他数据库，你需要先安装数据库，然后改变设置文件中  `DATABASES`， `default`  项目中的一些键值：
 
 -   **`ENGINE`**  可选值有 
-	-  `'django.db.backends.sqlite3'`，`'django.db.backends.postgresql'`，`'django.db.backends.mysql'`，或  `'django.db.backends.oracle'`。其它  [可用后端](https://docs.djangoproject.com/zh-hans/2.2/ref/databases/#third-party-notes)。
--   [`NAME`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-NAME)  - 数据库的名称。如果使用的是 SQLite，数据库将是你电脑上的一个文件，在这种情况下，  [`NAME`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-NAME)  应该是此文件的绝对路径，包括文件名。默认值  `os.path.join(BASE_DIR,  'db.sqlite3')`  将会把数据库文件储存在项目的根目录。
+	-  django.db.backends.sqlite3
+	- django.db.backends.postgresql
+	- django.db.backends.mysql
+	- django.db.backends.oracle
+-  **`NAME`** 数据库的名称
+	如果使用的是 SQLite，数据库将是你电脑上的一个文件，在这种情况下，  [`NAME`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-NAME)  应该是此文件的绝对路径，包括文件名。默认值  `os.path.join(BASE_DIR,  'db.sqlite3')`  将会把数据库文件储存在项目的根目录。
 
 如果你不使用 SQLite，则必须添加一些额外设置，比如  [`USER`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-USER)  、  [`PASSWORD`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-PASSWORD)  、  [`HOST`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-HOST)  等等。想了解更多数据库设置方面的内容，请看文档：[`DATABASES`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-DATABASES)  。
 
@@ -198,7 +202,7 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNzczNTQzNywtMTk2ODM1MDczNiw3Mz
+eyJoaXN0b3J5IjpbMTE4NzUwNDc4MiwtMTk2ODM1MDczNiw3Mz
 EyOTk2MzAsOTQzMzYyNzMyLC03MjUzNDI2MzcsMTAwNzM5NDU0
 MSwxMTk4MzYyNDEsODM2ODk3MzcxLC0xODQzNDY1MjMyLDE0OT
 A5OTE5OTgsMTEwMTUwOTUyNF19
