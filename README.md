@@ -142,7 +142,7 @@ Run 'python manage.py migrate' to apply them.
 
 Username (leave blank to use 'j00226207'): admin
 Email address: goodman_yunfei@163.com
-Password: yunfei5348
+Password: 
 Password (again): 
 Superuser created successfully.
 
@@ -150,7 +150,7 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwNzM5NDU0MSwxMTk4MzYyNDEsODM2OD
-k3MzcxLC0xODQzNDY1MjMyLDE0OTA5OTE5OTgsMTEwMTUwOTUy
-NF19
+eyJoaXN0b3J5IjpbLTcyNTM0MjYzNywxMDA3Mzk0NTQxLDExOT
+gzNjI0MSw4MzY4OTczNzEsLTE4NDM0NjUyMzIsMTQ5MDk5MTk5
+OCwxMTAxNTA5NTI0XX0=
 -->
