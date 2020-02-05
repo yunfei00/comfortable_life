@@ -4,8 +4,10 @@
 ## 2 搭建python + Django的环境
 python安装参考 [python安装说明](https://github.com/yunfei00/document/blob/master/software_instructions/python.md)
 Django环境配置参考 [Django 环境配置](https://github.com/yunfei00/document/blob/master/software_instructions/python_lib/django.md)
+## 3 创建项目
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDM0NjUyMzIsMTQ5MDk5MTk5OCwxMT
-AxNTA5NTI0XX0=
+eyJoaXN0b3J5IjpbLTEyMDAwNTU2MTcsLTE4NDM0NjUyMzIsMT
+Q5MDk5MTk5OCwxMTAxNTA5NTI0XX0=
 -->
