@@ -114,7 +114,7 @@ ALLOWED_HOSTS = ['*']  ＃在这里请求的host添加了*
 	```
 	默认开启的某些应用需要至少一个数据表，所以，在使用他们之前需要在数据库中创建一些表。请执行以下命令：
 	```
-	python manage.py migrate
+	python3 manage.py migrate
 	```
 	
 
@@ -190,7 +190,7 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxOTIzMTQzMSwtMjA1MTUwMTY2LC0xNz
+eyJoaXN0b3J5IjpbMTEzNTMyMjIyMCwtMjA1MTUwMTY2LC0xNz
 cxNDczMTM4LDIwNTAxMDg1MTMsLTE5NjgzNTA3MzYsNzMxMjk5
 NjMwLDk0MzM2MjczMiwtNzI1MzQyNjM3LDEwMDczOTQ1NDEsMT
 E5ODM2MjQxLDgzNjg5NzM3MSwtMTg0MzQ2NTIzMiwxNDkwOTkx
