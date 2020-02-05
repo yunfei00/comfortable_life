@@ -85,7 +85,7 @@ Invalid HTTP_HOST header: '192.168.0.100:8000'. You may need to add '192.168.0.1
 在我们创建的项目里修改setting.py文件
 ALLOWED_HOSTS = ['*']  ＃在这里请求的host添加了*
 
-# 6. 数据库设置
+# 6. 数据库配置
 mysql 遇到问题
 django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
 Did you install mysqlclient?
@@ -151,7 +151,8 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMxMjk5NjMwLDk0MzM2MjczMiwtNzI1Mz
-QyNjM3LDEwMDczOTQ1NDEsMTE5ODM2MjQxLDgzNjg5NzM3MSwt
-MTg0MzQ2NTIzMiwxNDkwOTkxOTk4LDExMDE1MDk1MjRdfQ==
+eyJoaXN0b3J5IjpbOTQzMjIxODg3LDczMTI5OTYzMCw5NDMzNj
+I3MzIsLTcyNTM0MjYzNywxMDA3Mzk0NTQxLDExOTgzNjI0MSw4
+MzY4OTczNzEsLTE4NDM0NjUyMzIsMTQ5MDk5MTk5OCwxMTAxNT
+A5NTI0XX0=
 -->
