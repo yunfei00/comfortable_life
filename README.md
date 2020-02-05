@@ -129,7 +129,7 @@ $ python manage.py migrate
 就像之前说的，为了方便大多数项目，我们默认激活了一些应用，但并不是每个人都需要它们。如果你不需要某个或某些应用，你可以在运行  [`migrate`](https://docs.djangoproject.com/zh-hans/2.2/ref/django-admin/#django-admin-migrate)  前毫无顾虑地从  [`INSTALLED_APPS`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-INSTALLED_APPS)  里注释或者删除掉它们。  [`migrate`](https://docs.djangoproject.com/zh-hans/2.2/ref/django-admin/#django-admin-migrate)  命令只会为在  [`INSTALLED_APPS`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-INSTALLED_APPS)  里声明了的应用进行数据库迁移。
 
 
-mysql 遇到问题
+## mysql 遇到问题
 django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
 Did you install mysqlclient?
 
@@ -194,8 +194,9 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzE0NzMxMzgsMjA1MDEwODUxMywtMT
-k2ODM1MDczNiw3MzEyOTk2MzAsOTQzMzYyNzMyLC03MjUzNDI2
-MzcsMTAwNzM5NDU0MSwxMTk4MzYyNDEsODM2ODk3MzcxLC0xOD
-QzNDY1MjMyLDE0OTA5OTE5OTgsMTEwMTUwOTUyNF19
+eyJoaXN0b3J5IjpbLTIwNTE1MDE2NiwtMTc3MTQ3MzEzOCwyMD
+UwMTA4NTEzLC0xOTY4MzUwNzM2LDczMTI5OTYzMCw5NDMzNjI3
+MzIsLTcyNTM0MjYzNywxMDA3Mzk0NTQxLDExOTgzNjI0MSw4Mz
+Y4OTczNzEsLTE4NDM0NjUyMzIsMTQ5MDk5MTk5OCwxMTAxNTA5
+NTI0XX0=
 -->
