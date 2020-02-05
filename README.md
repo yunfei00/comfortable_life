@@ -25,9 +25,10 @@ python manage.py runserver
 ```
 默认情况下，该runserver命令在端口8000的内部IP上启动开发服务器。
 如果要更改服务器的IP，请将其与端口一起传递。例如，要侦听所有可用的公共IP（如果您正在运行Vagrant或想要在网络上的其他计算机上展示您的工作，这很有用），请使用：
-python manage.py runserver 0:8000
-0是0.0.0.0的快捷方式
 ```
+python manage.py runserver 0:8000
+```
+0是0.0.0.0的快捷方式
 
 # 4. 创建民意调查应用
 
@@ -149,6 +150,7 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5ODM2MjQxLDgzNjg5NzM3MSwtMTg0Mz
-Q2NTIzMiwxNDkwOTkxOTk4LDExMDE1MDk1MjRdfQ==
+eyJoaXN0b3J5IjpbMTAwNzM5NDU0MSwxMTk4MzYyNDEsODM2OD
+k3MzcxLC0xODQzNDY1MjMyLDE0OTA5OTE5OTgsMTEwMTUwOTUy
+NF19
 -->
