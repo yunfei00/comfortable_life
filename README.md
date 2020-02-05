@@ -88,8 +88,7 @@ ALLOWED_HOSTS = ['*']  ＃在这里请求的host添加了*
 # 6. 数据库配置
 打开  `mysite/settings.py`  ,这是个包含了 Django 项目设置的 Python 模块。
 
-通常，这个配置文件使用 SQLite 作为默认数据库。如果你不熟悉数据库，或者只是想尝试下 Django，这是最简单的选择。Python 内置 SQLite，所以你无需安装额外东西来使用它。当你开始一个真正的项目时，你可能更倾向使用一个更具扩展性的数据库，例如 PostgreSQL，避免中途切换数据库这个令人头疼的问题。
-
+通常，这个配置文件使用 SQLite 作为默认数据库。如果你不熟悉数据库，或者只是想尝试下 Django，这是最简单的选择。Python 内置 SQLite，所以你无需安装额外东西来使用它。
 如果你想使用其他数据库，你需要安装合适的  [database bindings](https://docs.djangoproject.com/zh-hans/2.2/topics/install/#database-installation)  ，然后改变设置文件中  [`DATABASES`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-DATABASES)  `'default'`  项目中的一些键值：
 
 -   [`ENGINE`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-DATABASE-ENGINE)  -- 可选值有  `'django.db.backends.sqlite3'`，`'django.db.backends.postgresql'`，`'django.db.backends.mysql'`，或  `'django.db.backends.oracle'`。其它  [可用后端](https://docs.djangoproject.com/zh-hans/2.2/ref/databases/#third-party-notes)。
@@ -198,7 +197,7 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjM2NjY2ODUsNzMxMjk5NjMwLDk0Mz
+eyJoaXN0b3J5IjpbLTE5NjgzNTA3MzYsNzMxMjk5NjMwLDk0Mz
 M2MjczMiwtNzI1MzQyNjM3LDEwMDczOTQ1NDEsMTE5ODM2MjQx
 LDgzNjg5NzM3MSwtMTg0MzQ2NTIzMiwxNDkwOTkxOTk4LDExMD
 E1MDk1MjRdfQ==
