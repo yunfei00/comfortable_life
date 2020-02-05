@@ -118,11 +118,7 @@ ALLOWED_HOSTS = ['*']  ＃在这里请求的host添加了*
 	```
 	
 
-这个  [`migrate`](https://docs.djangoproject.com/zh-hans/2.2/ref/django-admin/#django-admin-migrate)  命令检查  [`INSTALLED_APPS`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-INSTALLED_APPS)  设置，为其中的每个应用创建需要的数据表，至于具体会创建什么，这取决于你的  `mysite/settings.py`  设置文件和每个应用的数据库迁移文件（我们稍后会介绍这个）。这个命令所执行的每个迁移操作都会在终端中显示出来。如果你感兴趣的话，运行你数据库的命令行工具，并输入  `\dt`  (PostgreSQL)，  `SHOW  TABLES;`  (MySQL)，  `.schema`  (SQLite)或者  `SELECT  TABLE_NAME  FROM  USER_TABLES;`  (Oracle) 来看看 Django 到底创建了哪些表。
-
-写给极简主义者
-
-就像之前说的，为了方便大多数项目，我们默认激活了一些应用，但并不是每个人都需要它们。如果你不需要某个或某些应用，你可以在运行  [`migrate`](https://docs.djangoproject.com/zh-hans/2.2/ref/django-admin/#django-admin-migrate)  前毫无顾虑地从  [`INSTALLED_APPS`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-INSTALLED_APPS)  里注释或者删除掉它们。  [`migrate`](https://docs.djangoproject.com/zh-hans/2.2/ref/django-admin/#django-admin-migrate)  命令只会为在  [`INSTALLED_APPS`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-INSTALLED_APPS)  里声明了的应用进行数据库迁移。
+这个  [`migrate`] 命令检查  [`INSTALLED_APPS`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-INSTALLED_APPS)  设置，为其中的每个应用创建需要的数据表，至于具体会创建什么，这取决于你的  `mysite/settings.py`  设置文件和每个应用的数据库迁移文件（我们稍后会介绍这个）。这个命令所执行的每个迁移操作都会在终端中显示出来。如果你感兴趣的话，运行你数据库的命令行工具，并输入  `\dt`  (PostgreSQL)，  `SHOW  TABLES;`  (MySQL)，  `.schema`  (SQLite)或者  `SELECT  TABLE_NAME  FROM  USER_TABLES;`  (Oracle) 来看看 Django 到底创建了哪些表。
 
 
 ## mysql 遇到问题
@@ -190,7 +186,7 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNTMyMjIyMCwtMjA1MTUwMTY2LC0xNz
+eyJoaXN0b3J5IjpbMTE3MDc4NzE1MywtMjA1MTUwMTY2LC0xNz
 cxNDczMTM4LDIwNTAxMDg1MTMsLTE5NjgzNTA3MzYsNzMxMjk5
 NjMwLDk0MzM2MjczMiwtNzI1MzQyNjM3LDEwMDczOTQ1NDEsMT
 E5ODM2MjQxLDgzNjg5NzM3MSwtMTg0MzQ2NTIzMiwxNDkwOTkx
