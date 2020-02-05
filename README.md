@@ -16,6 +16,15 @@ mysite/              --项目容器，名字是自己定义的
     ├── settings.py    --此Django项目的设置/配置
     ├── urls.py        --这个Django项目的URL声明; 您的Django支持的站点的“目录”
     └── wsgi.py        --与WSGI兼容的Web服务器的入口点，用于为您的项目提供服务。
+comfortable_life
+|-- manage.py
+`-- comfortable_life
+    |-- wsgi.py
+    |-- urls.py
+    |-- settings.py
+    |-- __init__.py
+    `-- asgi.py
+
 ```    
 # 3. 启动服务器
 ```
@@ -146,6 +155,6 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0MzY2NTE4MSwtMTg0MzQ2NTIzMiwxND
-kwOTkxOTk4LDExMDE1MDk1MjRdfQ==
+eyJoaXN0b3J5IjpbNzU0NDUxNTc1LC0xODQzNDY1MjMyLDE0OT
+A5OTE5OTgsMTEwMTUwOTUyNF19
 -->
