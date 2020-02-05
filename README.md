@@ -34,15 +34,16 @@ python3 manage.py runserver 0:8000
 
 ```
 python3 manage.py startapp polls
+
 polls/
-├── __init__.py
-├── admin.py
-├── apps.py
-├── migrations
-│   └── __init__.py
-├── models.py
-├── tests.py
-└── views.py
+|-- admin.py
+|-- apps.py
+|-- __init__.py
+|-- migrations
+|   `-- __init__.py
+|-- models.py
+|-- tests.py
+`-- views.py
 ```
 # 5. 编写第一个视图
 1. 视图内容
@@ -150,7 +151,7 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5OTg1NDU0OCwtNzI1MzQyNjM3LDEwMD
-czOTQ1NDEsMTE5ODM2MjQxLDgzNjg5NzM3MSwtMTg0MzQ2NTIz
-MiwxNDkwOTkxOTk4LDExMDE1MDk1MjRdfQ==
+eyJoaXN0b3J5IjpbOTQzMzYyNzMyLC03MjUzNDI2MzcsMTAwNz
+M5NDU0MSwxMTk4MzYyNDEsODM2ODk3MzcxLC0xODQzNDY1MjMy
+LDE0OTA5OTE5OTgsMTEwMTUwOTUyNF19
 -->
