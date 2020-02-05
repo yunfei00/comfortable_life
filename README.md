@@ -88,8 +88,8 @@ ALLOWED_HOSTS = ['*']  ＃在这里请求的host添加了*
 # 6. 数据库配置
 1. 打开  `mysite/settings.py`  ,这是个包含了 Django 项目设置的 Python 模块。
 
-通常，这个配置文件使用 SQLite 作为默认数据库。如果你不熟悉数据库，或者只是想尝试下 Django，这是最简单的选择。Python 内置 SQLite，所以你无需安装额外东西来使用它。
-如果你想使用其他数据库，你需要先安装数据库，然后改变设置文件中  `DATABASES`， `default`  项目中的一些键值：
+	通常，这个配置文件使用 SQLite 作为默认数据库。如果你不熟悉数据库，或者只是想尝试下 Django，这是最简单的选择。Python 内置 SQLite，所以你无需安装额外东西来使用它。
+	如果你想使用其他数据库，你需要先安装数据库，然后改变设置文件中  `DATABASES`， `default`  项目中的一些键值：
 
 -   **`ENGINE`**  可选值有 
 	-  django.db.backends.sqlite3
@@ -97,7 +97,6 @@ ALLOWED_HOSTS = ['*']  ＃在这里请求的host添加了*
 	- django.db.backends.mysql
 	- django.db.backends.oracle
 -  **`NAME`** 数据库的名称
-	如果使用的是 SQLite，数据库将是你电脑上的一个文件，在这种情况下，  [`NAME`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-NAME)  应该是此文件的绝对路径，包括文件名。默认值  `os.path.join(BASE_DIR,  'db.sqlite3')`  将会把数据库文件储存在项目的根目录。
 
 	mysql 配置，修改原来的DATABASES为以下内容：
 	```
@@ -113,10 +112,10 @@ ALLOWED_HOSTS = ['*']  ＃在这里请求的host添加了*
 	}
 	```
 
-## mysql 遇到问题
+2. mysql 配置完遇到问题
 django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
 Did you install mysqlclient?
-
+处理方案
 安装pip install pymysql   
 mysite:
 __init__.py 文件加入：
@@ -178,7 +177,7 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMzU0NjQ0MCwtMjA1MTUwMTY2LC0xNz
+eyJoaXN0b3J5IjpbMjAzOTAwMTUzMSwtMjA1MTUwMTY2LC0xNz
 cxNDczMTM4LDIwNTAxMDg1MTMsLTE5NjgzNTA3MzYsNzMxMjk5
 NjMwLDk0MzM2MjczMiwtNzI1MzQyNjM3LDEwMDczOTQ1NDEsMT
 E5ODM2MjQxLDgzNjg5NzM3MSwtMTg0MzQ2NTIzMiwxNDkwOTkx
