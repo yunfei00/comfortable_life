@@ -7,7 +7,7 @@ Django环境配置参考 [Django 环境配置](https://github.com/yunfei00/docum
 
 # 2. 创建项目
 ```
-django-admin startproject mysite
+django-admin startproject comfortable_life
 
 mysite/              --项目容器，名字是自己定义的
 ├── manage.py         --一个命令行实用程序，允许您以各种方式与此Django项目进行交互。
@@ -35,7 +35,7 @@ polls/
 ├── admin.py
 ├── apps.py
 ├── migrations
-│   └── __init__.py
+│   └── __init__.py
 ├── models.py
 ├── tests.py
 └── views.py
@@ -146,6 +146,6 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM0MTM0NjE5LC0xODQzNDY1MjMyLDE0OT
-A5OTE5OTgsMTEwMTUwOTUyNF19
+eyJoaXN0b3J5IjpbMTQ0MzY2NTE4MSwtMTg0MzQ2NTIzMiwxND
+kwOTkxOTk4LDExMDE1MDk1MjRdfQ==
 -->
