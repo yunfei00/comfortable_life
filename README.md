@@ -112,14 +112,6 @@ ALLOWED_HOSTS = ['*']  ＃在这里请求的host添加了*
 	   }
 	}
 	```
-	默认开启的某些应用需要至少一个数据表，所以，在使用他们之前需要在数据库中创建一些表。请执行以下命令：
-	```
-	python3 manage.py migrate
-	```
-	
-
-这个  [`migrate`] 命令检查  [`INSTALLED_APPS`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-INSTALLED_APPS)  设置，为其中的每个应用创建需要的数据表，至于具体会创建什么，这取决于你的  `mysite/settings.py`  设置文件和每个应用的数据库迁移文件（我们稍后会介绍这个）。这个命令所执行的每个迁移操作都会在终端中显示出来。如果你感兴趣的话，运行你数据库的命令行工具，并输入  `\dt`  (PostgreSQL)，  `SHOW  TABLES;`  (MySQL)，  `.schema`  (SQLite)或者  `SELECT  TABLE_NAME  FROM  USER_TABLES;`  (Oracle) 来看看 Django 到底创建了哪些表。
-
 
 ## mysql 遇到问题
 django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
@@ -186,9 +178,9 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3MDc4NzE1MywtMjA1MTUwMTY2LC0xNz
-cxNDczMTM4LDIwNTAxMDg1MTMsLTE5NjgzNTA3MzYsNzMxMjk5
-NjMwLDk0MzM2MjczMiwtNzI1MzQyNjM3LDEwMDczOTQ1NDEsMT
-E5ODM2MjQxLDgzNjg5NzM3MSwtMTg0MzQ2NTIzMiwxNDkwOTkx
-OTk4LDExMDE1MDk1MjRdfQ==
+eyJoaXN0b3J5IjpbMzA0NzY3NDQ1LC0yMDUxNTAxNjYsLTE3Nz
+E0NzMxMzgsMjA1MDEwODUxMywtMTk2ODM1MDczNiw3MzEyOTk2
+MzAsOTQzMzYyNzMyLC03MjUzNDI2MzcsMTAwNzM5NDU0MSwxMT
+k4MzYyNDEsODM2ODk3MzcxLC0xODQzNDY1MjMyLDE0OTA5OTE5
+OTgsMTEwMTUwOTUyNF19
 -->
