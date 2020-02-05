@@ -101,14 +101,6 @@ ALLOWED_HOSTS = ['*']  ＃在这里请求的host添加了*
 
 	如果你不使用 SQLite，则必须添加一些额外设置，比如  `USER` 、  `PASSWORD`、  `HOST`等。
 	
-SQLite 以外的其它数据库
-
-如果你使用了 SQLite 以外的数据库，请确认在使用前已经创建了数据库。你可以通过在你的数据库交互式命令行中使用 "`CREATE  DATABASE  database_name;`" 命令来完成这件事。
-
-另外，还要确保该数据库用户中提供  `mysite/settings.py`  具有 "create database" 权限。这使得自动创建的  [test database](https://docs.djangoproject.com/zh-hans/2.2/topics/testing/overview/#the-test-database)  能被以后的教程使用。
-
-如果你使用 SQLite，那么你不需要在使用前做任何事——数据库会在需要的时候自动创建。
-
 编辑  `mysite/settings.py`  文件前，先设置  [`TIME_ZONE`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-TIME_ZONE)  为你自己时区。
 
 此外，关注一下文件头部的  [`INSTALLED_APPS`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-INSTALLED_APPS)  设置项。这里包括了会在你项目中启用的所有 Django 应用。应用能在多个项目中使用，你也可以打包并且发布应用，让别人使用它们。
@@ -202,8 +194,8 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1MDEwODUxMywtMTk2ODM1MDczNiw3Mz
-EyOTk2MzAsOTQzMzYyNzMyLC03MjUzNDI2MzcsMTAwNzM5NDU0
-MSwxMTk4MzYyNDEsODM2ODk3MzcxLC0xODQzNDY1MjMyLDE0OT
-A5OTE5OTgsMTEwMTUwOTUyNF19
+eyJoaXN0b3J5IjpbLTE3NzE0NzMxMzgsMjA1MDEwODUxMywtMT
+k2ODM1MDczNiw3MzEyOTk2MzAsOTQzMzYyNzMyLC03MjUzNDI2
+MzcsMTAwNzM5NDU0MSwxMTk4MzYyNDEsODM2ODk3MzcxLC0xOD
+QzNDY1MjMyLDE0OTA5OTE5OTgsMTEwMTUwOTUyNF19
 -->
