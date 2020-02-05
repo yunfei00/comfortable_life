@@ -101,20 +101,7 @@ ALLOWED_HOSTS = ['*']  ＃在这里请求的host添加了*
 
 	如果你不使用 SQLite，则必须添加一些额外设置，比如  `USER` 、  `PASSWORD`、  `HOST`等。
 	
-编辑  `mysite/settings.py`  文件前，先设置  [`TIME_ZONE`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-TIME_ZONE)  为你自己时区。
 
-此外，关注一下文件头部的  [`INSTALLED_APPS`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-INSTALLED_APPS)  设置项。这里包括了会在你项目中启用的所有 Django 应用。应用能在多个项目中使用，你也可以打包并且发布应用，让别人使用它们。
-
-通常，  [`INSTALLED_APPS`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-INSTALLED_APPS)  默认包括了以下 Django 的自带应用：
-
--   [`django.contrib.admin`](https://docs.djangoproject.com/zh-hans/2.2/ref/contrib/admin/#module-django.contrib.admin "django.contrib.admin: Django's admin site.")  -- 管理员站点， 你很快就会使用它。
--   [`django.contrib.auth`](https://docs.djangoproject.com/zh-hans/2.2/topics/auth/#module-django.contrib.auth "django.contrib.auth: Django's authentication framework.")  -- 认证授权系统。
--   [`django.contrib.contenttypes`](https://docs.djangoproject.com/zh-hans/2.2/ref/contrib/contenttypes/#module-django.contrib.contenttypes "django.contrib.contenttypes: Provides generic interface to installed models.")  -- 内容类型框架。
--   [`django.contrib.sessions`](https://docs.djangoproject.com/zh-hans/2.2/topics/http/sessions/#module-django.contrib.sessions "django.contrib.sessions: Provides session management for Django projects.")  -- 会话框架。
--   [`django.contrib.messages`](https://docs.djangoproject.com/zh-hans/2.2/ref/contrib/messages/#module-django.contrib.messages "django.contrib.messages: Provides cookie- and session-based temporary message storage.")  -- 消息框架。
--   [`django.contrib.staticfiles`](https://docs.djangoproject.com/zh-hans/2.2/ref/contrib/staticfiles/#module-django.contrib.staticfiles "django.contrib.staticfiles: An app for handling static files.")  -- 管理静态文件的框架。
-
-这些应用被默认启用是为了给常规项目提供方便。
 
 默认开启的某些应用需要至少一个数据表，所以，在使用他们之前需要在数据库中创建一些表。请执行以下命令：
 
@@ -194,9 +181,9 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTE1MDE2NiwtMTc3MTQ3MzEzOCwyMD
-UwMTA4NTEzLC0xOTY4MzUwNzM2LDczMTI5OTYzMCw5NDMzNjI3
-MzIsLTcyNTM0MjYzNywxMDA3Mzk0NTQxLDExOTgzNjI0MSw4Mz
-Y4OTczNzEsLTE4NDM0NjUyMzIsMTQ5MDk5MTk5OCwxMTAxNTA5
-NTI0XX0=
+eyJoaXN0b3J5IjpbLTE1OTk1NDk3MTcsLTIwNTE1MDE2NiwtMT
+c3MTQ3MzEzOCwyMDUwMTA4NTEzLC0xOTY4MzUwNzM2LDczMTI5
+OTYzMCw5NDMzNjI3MzIsLTcyNTM0MjYzNywxMDA3Mzk0NTQxLD
+ExOTgzNjI0MSw4MzY4OTczNzEsLTE4NDM0NjUyMzIsMTQ5MDk5
+MTk5OCwxMTAxNTA5NTI0XX0=
 -->
