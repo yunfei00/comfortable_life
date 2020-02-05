@@ -86,6 +86,53 @@ Invalid HTTP_HOST header: '192.168.0.100:8000'. You may need to add '192.168.0.1
 ALLOWED_HOSTS = ['*']  ＃在这里请求的host添加了*
 
 # 6. 数据库配置
+打开  `mysite/settings.py`  ,这是个包含了 Django 项目设置的 Python 模块。
+
+通常，这个配置文件使用 SQLite 作为默认数据库。如果你不熟悉数据库，或者只是想尝试下 Django，这是最简单的选择。Python 内置 SQLite，所以你无需安装额外东西来使用它。当你开始一个真正的项目时，你可能更倾向使用一个更具扩展性的数据库，例如 PostgreSQL，避免中途切换数据库这个令人头疼的问题。
+
+如果你想使用其他数据库，你需要安装合适的  [database bindings](https://docs.djangoproject.com/zh-hans/2.2/topics/install/#database-installation)  ，然后改变设置文件中  [`DATABASES`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-DATABASES)  `'default'`  项目中的一些键值：
+
+-   [`ENGINE`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-DATABASE-ENGINE)  -- 可选值有  `'django.db.backends.sqlite3'`，`'django.db.backends.postgresql'`，`'django.db.backends.mysql'`，或  `'django.db.backends.oracle'`。其它  [可用后端](https://docs.djangoproject.com/zh-hans/2.2/ref/databases/#third-party-notes)。
+-   [`NAME`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-NAME)  - 数据库的名称。如果使用的是 SQLite，数据库将是你电脑上的一个文件，在这种情况下，  [`NAME`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-NAME)  应该是此文件的绝对路径，包括文件名。默认值  `os.path.join(BASE_DIR,  'db.sqlite3')`  将会把数据库文件储存在项目的根目录。
+
+如果你不使用 SQLite，则必须添加一些额外设置，比如  [`USER`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-USER)  、  [`PASSWORD`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-PASSWORD)  、  [`HOST`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-HOST)  等等。想了解更多数据库设置方面的内容，请看文档：[`DATABASES`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-DATABASES)  。
+
+SQLite 以外的其它数据库
+
+如果你使用了 SQLite 以外的数据库，请确认在使用前已经创建了数据库。你可以通过在你的数据库交互式命令行中使用 "`CREATE  DATABASE  database_name;`" 命令来完成这件事。
+
+另外，还要确保该数据库用户中提供  `mysite/settings.py`  具有 "create database" 权限。这使得自动创建的  [test database](https://docs.djangoproject.com/zh-hans/2.2/topics/testing/overview/#the-test-database)  能被以后的教程使用。
+
+如果你使用 SQLite，那么你不需要在使用前做任何事——数据库会在需要的时候自动创建。
+
+编辑  `mysite/settings.py`  文件前，先设置  [`TIME_ZONE`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-TIME_ZONE)  为你自己时区。
+
+此外，关注一下文件头部的  [`INSTALLED_APPS`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-INSTALLED_APPS)  设置项。这里包括了会在你项目中启用的所有 Django 应用。应用能在多个项目中使用，你也可以打包并且发布应用，让别人使用它们。
+
+通常，  [`INSTALLED_APPS`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-INSTALLED_APPS)  默认包括了以下 Django 的自带应用：
+
+-   [`django.contrib.admin`](https://docs.djangoproject.com/zh-hans/2.2/ref/contrib/admin/#module-django.contrib.admin "django.contrib.admin: Django's admin site.")  -- 管理员站点， 你很快就会使用它。
+-   [`django.contrib.auth`](https://docs.djangoproject.com/zh-hans/2.2/topics/auth/#module-django.contrib.auth "django.contrib.auth: Django's authentication framework.")  -- 认证授权系统。
+-   [`django.contrib.contenttypes`](https://docs.djangoproject.com/zh-hans/2.2/ref/contrib/contenttypes/#module-django.contrib.contenttypes "django.contrib.contenttypes: Provides generic interface to installed models.")  -- 内容类型框架。
+-   [`django.contrib.sessions`](https://docs.djangoproject.com/zh-hans/2.2/topics/http/sessions/#module-django.contrib.sessions "django.contrib.sessions: Provides session management for Django projects.")  -- 会话框架。
+-   [`django.contrib.messages`](https://docs.djangoproject.com/zh-hans/2.2/ref/contrib/messages/#module-django.contrib.messages "django.contrib.messages: Provides cookie- and session-based temporary message storage.")  -- 消息框架。
+-   [`django.contrib.staticfiles`](https://docs.djangoproject.com/zh-hans/2.2/ref/contrib/staticfiles/#module-django.contrib.staticfiles "django.contrib.staticfiles: An app for handling static files.")  -- 管理静态文件的框架。
+
+这些应用被默认启用是为了给常规项目提供方便。
+
+默认开启的某些应用需要至少一个数据表，所以，在使用他们之前需要在数据库中创建一些表。请执行以下命令：
+
+/  
+
+$ python manage.py migrate
+
+这个  [`migrate`](https://docs.djangoproject.com/zh-hans/2.2/ref/django-admin/#django-admin-migrate)  命令检查  [`INSTALLED_APPS`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-INSTALLED_APPS)  设置，为其中的每个应用创建需要的数据表，至于具体会创建什么，这取决于你的  `mysite/settings.py`  设置文件和每个应用的数据库迁移文件（我们稍后会介绍这个）。这个命令所执行的每个迁移操作都会在终端中显示出来。如果你感兴趣的话，运行你数据库的命令行工具，并输入  `\dt`  (PostgreSQL)，  `SHOW  TABLES;`  (MySQL)，  `.schema`  (SQLite)或者  `SELECT  TABLE_NAME  FROM  USER_TABLES;`  (Oracle) 来看看 Django 到底创建了哪些表。
+
+写给极简主义者
+
+就像之前说的，为了方便大多数项目，我们默认激活了一些应用，但并不是每个人都需要它们。如果你不需要某个或某些应用，你可以在运行  [`migrate`](https://docs.djangoproject.com/zh-hans/2.2/ref/django-admin/#django-admin-migrate)  前毫无顾虑地从  [`INSTALLED_APPS`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-INSTALLED_APPS)  里注释或者删除掉它们。  [`migrate`](https://docs.djangoproject.com/zh-hans/2.2/ref/django-admin/#django-admin-migrate)  命令只会为在  [`INSTALLED_APPS`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-INSTALLED_APPS)  里声明了的应用进行数据库迁移。
+
+
 mysql 遇到问题
 django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
 Did you install mysqlclient?
@@ -151,8 +198,8 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQzMjIxODg3LDczMTI5OTYzMCw5NDMzNj
-I3MzIsLTcyNTM0MjYzNywxMDA3Mzk0NTQxLDExOTgzNjI0MSw4
-MzY4OTczNzEsLTE4NDM0NjUyMzIsMTQ5MDk5MTk5OCwxMTAxNT
-A5NTI0XX0=
+eyJoaXN0b3J5IjpbLTEyMjM2NjY2ODUsNzMxMjk5NjMwLDk0Mz
+M2MjczMiwtNzI1MzQyNjM3LDEwMDczOTQ1NDEsMTE5ODM2MjQx
+LDgzNjg5NzM3MSwtMTg0MzQ2NTIzMiwxNDkwOTkxOTk4LDExMD
+E1MDk1MjRdfQ==
 -->
