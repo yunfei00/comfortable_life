@@ -9,19 +9,12 @@ Django环境配置参考 [Django 环境配置](https://github.com/yunfei00/docum
 ```
 django-admin startproject comfortable_life
 
-mysite/              --项目容器，名字是自己定义的
-├── manage.py         
-└── mysite            
-    ├── __init__.py    
-    ├── settings.py    --此Django项目的设置/配置
-    ├── urls.py        --这个Django项目的URL声明; 您的Django支持的站点的“目录”
-    └── wsgi.py        --与WSGI兼容的Web服务器的入口点，用于为您的项目提供服务。
 comfortable_life    --项目容器，名字是自己定义的
 |-- manage.py --一个命令行实用程序，允许您以各种方式与此Django项目进行交互
 `-- comfortable_life --内部mysite/目录是项目的实际Python包
-    |-- wsgi.py
-    |-- urls.py
-    |-- settings.py
+    |-- wsgi.py      --与WSGI兼容的Web服务器的入口点，用于为您的项目提供服务。
+    |-- urls.py      --这个Django项目的URL声明; 您的Django支持的站点的“目录”
+    |-- settings.py  --此Django项目的设置/配置
     |-- __init__.py  --空文件，告诉python这个文件夹是python包
     `-- asgi.py
 
@@ -155,6 +148,6 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NTA4NTI1NiwtMTg0MzQ2NTIzMiwxND
-kwOTkxOTk4LDExMDE1MDk1MjRdfQ==
+eyJoaXN0b3J5IjpbODM2ODk3MzcxLC0xODQzNDY1MjMyLDE0OT
+A5OTE5OTgsMTEwMTUwOTUyNF19
 -->
