@@ -7,7 +7,7 @@ Django环境配置参考 [Django 环境配置](https://github.com/yunfei00/docum
 
 # 2. 创建项目
 ```
-django-admin startproject comfortable_life
+django-admin startproject mysite
 
 comfortable_life    --项目容器，名字是自己定义的
 |-- manage.py --一个命令行实用程序，允许您以各种方式与此Django项目进行交互
@@ -151,7 +151,7 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQzMzYyNzMyLC03MjUzNDI2MzcsMTAwNz
-M5NDU0MSwxMTk4MzYyNDEsODM2ODk3MzcxLC0xODQzNDY1MjMy
-LDE0OTA5OTE5OTgsMTEwMTUwOTUyNF19
+eyJoaXN0b3J5IjpbMzk3MzY1ODA2LDk0MzM2MjczMiwtNzI1Mz
+QyNjM3LDEwMDczOTQ1NDEsMTE5ODM2MjQxLDgzNjg5NzM3MSwt
+MTg0MzQ2NTIzMiwxNDkwOTkxOTk4LDExMDE1MDk1MjRdfQ==
 -->
