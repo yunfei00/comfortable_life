@@ -100,13 +100,31 @@ ALLOWED_HOSTS = ['*']  ＃在这里请求的host添加了*
 	如果使用的是 SQLite，数据库将是你电脑上的一个文件，在这种情况下，  [`NAME`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-NAME)  应该是此文件的绝对路径，包括文件名。默认值  `os.path.join(BASE_DIR,  'db.sqlite3')`  将会把数据库文件储存在项目的根目录。
 
 	如果你不使用 SQLite，则必须添加一些额外设置，比如  `USER` 、  `PASSWORD`、  `HOST`等。
+	```
+	DATABASES = {
+
+'default': {
+
+'ENGINE': 'django.db.backends.mysql',
+
+'NAME': 'mydatabase',
+
+'USER': 'mydatabaseuser',
+
+'PASSWORD': 'mypassword',
+
+'HOST': '127.0.0.1',
+
+'PORT': '3306',
+
+}
+
+}
+	```
 	
 
 
 默认开启的某些应用需要至少一个数据表，所以，在使用他们之前需要在数据库中创建一些表。请执行以下命令：
-
-/  
-
 $ python manage.py migrate
 
 这个  [`migrate`](https://docs.djangoproject.com/zh-hans/2.2/ref/django-admin/#django-admin-migrate)  命令检查  [`INSTALLED_APPS`](https://docs.djangoproject.com/zh-hans/2.2/ref/settings/#std:setting-INSTALLED_APPS)  设置，为其中的每个应用创建需要的数据表，至于具体会创建什么，这取决于你的  `mysite/settings.py`  设置文件和每个应用的数据库迁移文件（我们稍后会介绍这个）。这个命令所执行的每个迁移操作都会在终端中显示出来。如果你感兴趣的话，运行你数据库的命令行工具，并输入  `\dt`  (PostgreSQL)，  `SHOW  TABLES;`  (MySQL)，  `.schema`  (SQLite)或者  `SELECT  TABLE_NAME  FROM  USER_TABLES;`  (Oracle) 来看看 Django 到底创建了哪些表。
@@ -181,7 +199,7 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTk1NDk3MTcsLTIwNTE1MDE2NiwtMT
+eyJoaXN0b3J5IjpbLTEwODYwOTU0NzgsLTIwNTE1MDE2NiwtMT
 c3MTQ3MzEzOCwyMDUwMTA4NTEzLC0xOTY4MzUwNzM2LDczMTI5
 OTYzMCw5NDMzNjI3MzIsLTcyNTM0MjYzNywxMDA3Mzk0NTQxLD
 ExOTgzNjI0MSw4MzY4OTczNzEsLTE4NDM0NjUyMzIsMTQ5MDk5
