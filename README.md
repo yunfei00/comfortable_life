@@ -86,7 +86,7 @@ Invalid HTTP_HOST header: '192.168.0.100:8000'. You may need to add '192.168.0.1
 ALLOWED_HOSTS = ['*']  ＃在这里请求的host添加了*
 
 # 6. 数据库配置
-打开  `mysite/settings.py`  ,这是个包含了 Django 项目设置的 Python 模块。
+1. 打开  `mysite/settings.py`  ,这是个包含了 Django 项目设置的 Python 模块。
 
 通常，这个配置文件使用 SQLite 作为默认数据库。如果你不熟悉数据库，或者只是想尝试下 Django，这是最简单的选择。Python 内置 SQLite，所以你无需安装额外东西来使用它。
 如果你想使用其他数据库，你需要先安装数据库，然后改变设置文件中  `DATABASES`， `default`  项目中的一些键值：
@@ -124,7 +124,7 @@ import pymysql
 pymysql.install_as_MySQLdb()
 
 
-vim /Users/j00226207/install_program_path/anaconda3/lib/python3.7/site-packages/django/db/backends/mysql/base.py
+~~vim /Users/j00226207/install_program_path/anaconda3/lib/python3.7/site-packages/django/db/backends/mysql/base.py
 修改：
 if version < (1, 3, 13):
    pass
@@ -137,7 +137,7 @@ if version < (1, 3, 13):
 vim /Users/j00226207/install_program_path/anaconda3/lib/python3.7/site-packages/django/db/backends/mysql/operations.py
 修改：
 query = query.decode(errors='replace')为：
-query = query.encode(errors='replace')
+query = query.encode(errors='replace')~~
 
 其中一些应用程序至少使用了一个数据库表，因此我们需要在使用它们之前在数据库中创建表。为此，请运行以下命令：
 ```
@@ -178,9 +178,9 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA0NzY3NDQ1LC0yMDUxNTAxNjYsLTE3Nz
-E0NzMxMzgsMjA1MDEwODUxMywtMTk2ODM1MDczNiw3MzEyOTk2
-MzAsOTQzMzYyNzMyLC03MjUzNDI2MzcsMTAwNzM5NDU0MSwxMT
-k4MzYyNDEsODM2ODk3MzcxLC0xODQzNDY1MjMyLDE0OTA5OTE5
-OTgsMTEwMTUwOTUyNF19
+eyJoaXN0b3J5IjpbLTcyMzU0NjQ0MCwtMjA1MTUwMTY2LC0xNz
+cxNDczMTM4LDIwNTAxMDg1MTMsLTE5NjgzNTA3MzYsNzMxMjk5
+NjMwLDk0MzM2MjczMiwtNzI1MzQyNjM3LDEwMDczOTQ1NDEsMT
+E5ODM2MjQxLDgzNjg5NzM3MSwtMTg0MzQ2NTIzMiwxNDkwOTkx
+OTk4LDExMDE1MDk1MjRdfQ==
 -->
