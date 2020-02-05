@@ -115,34 +115,34 @@ ALLOWED_HOSTS = ['*']  ＃在这里请求的host添加了*
 2. mysql 配置完遇到问题
 django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
 Did you install mysqlclient?
-处理方案
+处理方案：
 安装pip install pymysql   
 mysite:
 __init__.py 文件加入：
 import pymysql
 pymysql.install_as_MySQLdb()
 
+	
+	~~vim /Users/j00226207/install_program_path/anaconda3/lib/python3.7/site-packages/django/db/backends/mysql/base.py
+	修改：
+	if version < (1, 3, 13):
+	   pass
+	   '''
+	   raise ImproperlyConfigured(
+	       'mysqlclient 1.3.13 or newer is required; you have %s.'
+	       % Database.__version__
+	   )
+	   '''
+	vim /Users/j00226207/install_program_path/anaconda3/lib/python3.7/site-packages/django/db/backends/mysql/operations.py
+	修改：
+	query = query.decode(errors='replace')为：
+	query = query.encode(errors='replace')~~
 
-~~vim /Users/j00226207/install_program_path/anaconda3/lib/python3.7/site-packages/django/db/backends/mysql/base.py
-修改：
-if version < (1, 3, 13):
-   pass
-   '''
-   raise ImproperlyConfigured(
-       'mysqlclient 1.3.13 or newer is required; you have %s.'
-       % Database.__version__
-   )
-   '''
-vim /Users/j00226207/install_program_path/anaconda3/lib/python3.7/site-packages/django/db/backends/mysql/operations.py
-修改：
-query = query.decode(errors='replace')为：
-query = query.encode(errors='replace')~~
-
-其中一些应用程序至少使用了一个数据库表，因此我们需要在使用它们之前在数据库中创建表。为此，请运行以下命令：
-```
-python manage.py migrate
-```
-该migrate命令查看INSTALLED_APPS设置并根据mysite/settings.py文件中的数据库设置和应用程序附带的数据库迁移创建任何必要的数据库表（稍后我们将介绍这些表）。
+3. 其中一些应用程序至少使用了一个数据库表，因此我们需要在使用它们之前在数据库中创建表。为此，请运行以下命令：
+	```
+	python manage.py migrate
+	```
+	该migrate命令查看INSTALLED_APPS设置并根据mysite/settings.py文件中的数据库设置和应用程序附带的数据库迁移创建任何必要的数据库表。
 
 # 7 创建模型（数据表）
 ```
@@ -177,9 +177,9 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzOTAwMTUzMSwtMjA1MTUwMTY2LC0xNz
-cxNDczMTM4LDIwNTAxMDg1MTMsLTE5NjgzNTA3MzYsNzMxMjk5
-NjMwLDk0MzM2MjczMiwtNzI1MzQyNjM3LDEwMDczOTQ1NDEsMT
-E5ODM2MjQxLDgzNjg5NzM3MSwtMTg0MzQ2NTIzMiwxNDkwOTkx
-OTk4LDExMDE1MDk1MjRdfQ==
+eyJoaXN0b3J5IjpbODQ0MzQyNzI5LC0yMDUxNTAxNjYsLTE3Nz
+E0NzMxMzgsMjA1MDEwODUxMywtMTk2ODM1MDczNiw3MzEyOTk2
+MzAsOTQzMzYyNzMyLC03MjUzNDI2MzcsMTAwNzM5NDU0MSwxMT
+k4MzYyNDEsODM2ODk3MzcxLC0xODQzNDY1MjMyLDE0OTA5OTE5
+OTgsMTEwMTUwOTUyNF19
 -->
