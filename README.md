@@ -176,19 +176,13 @@ python3 manage.py createsuperuser
 # 9 增加应用到管理界面
 我们得告诉管理页面，问题 `Question` 对象需要被管理。打开 `polls/admin.py` 文件，把它编辑成下面这样：
 ```
-polls/admin.py[¶](https://docs.djangoproject.com/zh-hans/2.2/intro/tutorial02/#id6 "永久链接至代码")
 
-from django.contrib import admin
-
-from .models import Question
-
-admin.site.register(Question)
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUzNDg0OTkyLDg3NTY5NjE5Nyw4NDQzND
-I3MjksLTIwNTE1MDE2NiwtMTc3MTQ3MzEzOCwyMDUwMTA4NTEz
-LC0xOTY4MzUwNzM2LDczMTI5OTYzMCw5NDMzNjI3MzIsLTcyNT
-M0MjYzNywxMDA3Mzk0NTQxLDExOTgzNjI0MSw4MzY4OTczNzEs
-LTE4NDM0NjUyMzIsMTQ5MDk5MTk5OCwxMTAxNTA5NTI0XX0=
+eyJoaXN0b3J5IjpbLTYyNzQyNTg0Myw4NzU2OTYxOTcsODQ0Mz
+QyNzI5LC0yMDUxNTAxNjYsLTE3NzE0NzMxMzgsMjA1MDEwODUx
+MywtMTk2ODM1MDczNiw3MzEyOTk2MzAsOTQzMzYyNzMyLC03Mj
+UzNDI2MzcsMTAwNzM5NDU0MSwxMTk4MzYyNDEsODM2ODk3Mzcx
+LC0xODQzNDY1MjMyLDE0OTA5OTE5OTgsMTEwMTUwOTUyNF19
 -->
