@@ -174,20 +174,12 @@ Password (again):
 Superuser created successfully.
 
 
-在 Django 里写一个数据库驱动的 Web 应用的第一步是定义模型 - 也就是数据库结构设计和附加的其它元数据。
 
-设计哲学
-
-模型是真实数据的简单明确的描述。它包含了储存的数据所必要的字段和行为。Django 遵循  [DRY Principle](https://docs.djangoproject.com/zh-hans/2.2/misc/design-philosophies/#dry)  。它的目标是你只需要定义数据模型，然后其它的杂七杂八代码你都不用关心，它们会自动从模型生成。
-
-来介绍一下迁移 - 举个例子，不像 Ruby On Rails，Django 的迁移代码是由你的模型文件自动生成的，它本质上只是个历史记录，Django 可以用它来进行数据库的滚动更新，通过这种方式使其能够和当前的模型匹配。
-
-在这个简单的投票应用中，需要创建两个模型：问题  `Question`  和选项  `Choice`。`Question`  模型包括问题描述和发布时间。`Choice`  模型有两个字段，选项描述
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyNDIxMzU5OSwtMjA1MTUwMTY2LC0xNz
-cxNDczMTM4LDIwNTAxMDg1MTMsLTE5NjgzNTA3MzYsNzMxMjk5
-NjMwLDk0MzM2MjczMiwtNzI1MzQyNjM3LDEwMDczOTQ1NDEsMT
-E5ODM2MjQxLDgzNjg5NzM3MSwtMTg0MzQ2NTIzMiwxNDkwOTkx
-OTk4LDExMDE1MDk1MjRdfQ==
+eyJoaXN0b3J5IjpbODQ0MzQyNzI5LC0yMDUxNTAxNjYsLTE3Nz
+E0NzMxMzgsMjA1MDEwODUxMywtMTk2ODM1MDczNiw3MzEyOTk2
+MzAsOTQzMzYyNzMyLC03MjUzNDI2MzcsMTAwNzM5NDU0MSwxMT
+k4MzYyNDEsODM2ODk3MzcxLC0xODQzNDY1MjMyLDE0OTA5OTE5
+OTgsMTEwMTUwOTUyNF19
 -->
