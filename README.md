@@ -145,6 +145,7 @@ pymysql.install_as_MySQLdb()
 	该migrate命令查看INSTALLED_APPS设置并根据mysite/settings.py文件中的数据库设置和应用程序附带的数据库迁移创建任何必要的数据库表。
 
 # 7 创建模型（数据表）
+在polls/models.py文件中创建模型
 ```
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
@@ -161,11 +162,12 @@ class Choice(models.Model):
 python manage.py makemigrations polls
 ```
 运行以下命令在数据库中创建数据表：
-	```
-	python3 manage.py migrate
+```
+python3 manage.py migrate
 ```
 
 # 8 管理员
+- 创建一个
 (base) yunfei:mysite j00226207$ python manage.py createsuperuser
 
 You have 1 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): polls.
@@ -181,9 +183,9 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5MjU3MjkwMiw4NDQzNDI3MjksLTIwNT
-E1MDE2NiwtMTc3MTQ3MzEzOCwyMDUwMTA4NTEzLC0xOTY4MzUw
-NzM2LDczMTI5OTYzMCw5NDMzNjI3MzIsLTcyNTM0MjYzNywxMD
-A3Mzk0NTQxLDExOTgzNjI0MSw4MzY4OTczNzEsLTE4NDM0NjUy
-MzIsMTQ5MDk5MTk5OCwxMTAxNTA5NTI0XX0=
+eyJoaXN0b3J5IjpbLTE2NDUzODMwMTMsODQ0MzQyNzI5LC0yMD
+UxNTAxNjYsLTE3NzE0NzMxMzgsMjA1MDEwODUxMywtMTk2ODM1
+MDczNiw3MzEyOTk2MzAsOTQzMzYyNzMyLC03MjUzNDI2MzcsMT
+AwNzM5NDU0MSwxMTk4MzYyNDEsODM2ODk3MzcxLC0xODQzNDY1
+MjMyLDE0OTA5OTE5OTgsMTEwMTUwOTUyNF19
 -->
