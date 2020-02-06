@@ -166,19 +166,29 @@ python manage.py makemigrations polls
 python3 manage.py migrate
 ```
 
-# 8 管理员
+# 8 创建管理员
 - 创建一个管理员账号,根据提示输入用户名，邮箱和密码
 ```
 python3 manage.py createsuperuser
 ```
 - 在浏览器中使用管理员账号登录  [http://localhost:8000/admin/](http://localhost:8000/admin/)
 
+# 9 增加应用到管理界面
+我们得告诉管理页面，问题 `Question` 对象需要被管理。打开 `polls/admin.py` 文件，把它编辑成下面这样：
+```
+polls/admin.py[¶](https://docs.djangoproject.com/zh-hans/2.2/intro/tutorial02/#id6 "永久链接至代码")
 
+from django.contrib import admin
+
+from .models import Question
+
+admin.site.register(Question)
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc1Njk2MTk3LDg0NDM0MjcyOSwtMjA1MT
-UwMTY2LC0xNzcxNDczMTM4LDIwNTAxMDg1MTMsLTE5NjgzNTA3
-MzYsNzMxMjk5NjMwLDk0MzM2MjczMiwtNzI1MzQyNjM3LDEwMD
-czOTQ1NDEsMTE5ODM2MjQxLDgzNjg5NzM3MSwtMTg0MzQ2NTIz
-MiwxNDkwOTkxOTk4LDExMDE1MDk1MjRdfQ==
+eyJoaXN0b3J5IjpbOTUzNDg0OTkyLDg3NTY5NjE5Nyw4NDQzND
+I3MjksLTIwNTE1MDE2NiwtMTc3MTQ3MzEzOCwyMDUwMTA4NTEz
+LC0xOTY4MzUwNzM2LDczMTI5OTYzMCw5NDMzNjI3MzIsLTcyNT
+M0MjYzNywxMDA3Mzk0NTQxLDExOTgzNjI0MSw4MzY4OTczNzEs
+LTE4NDM0NjUyMzIsMTQ5MDk5MTk5OCwxMTAxNTA5NTI0XX0=
 -->
