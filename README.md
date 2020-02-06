@@ -167,24 +167,18 @@ python3 manage.py migrate
 ```
 
 # 8 管理员
-- 创建一个管理员账号, `python3 manage.py createsuperuser`
-
-You have 1 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): polls.
-Run 'python manage.py migrate' to apply them.
-
-Username (leave blank to use 'j00226207'): admin
-Email address: goodman_yunfei@163.com
-Password: 
-Password (again): 
-Superuser created successfully.
-
+- 创建一个管理员账号,根据提示输入用户名，邮箱和密码
+```
+python3 manage.py createsuperuser
+```
+- 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjMwNDY3ODYsODQ0MzQyNzI5LC0yMD
-UxNTAxNjYsLTE3NzE0NzMxMzgsMjA1MDEwODUxMywtMTk2ODM1
-MDczNiw3MzEyOTk2MzAsOTQzMzYyNzMyLC03MjUzNDI2MzcsMT
-AwNzM5NDU0MSwxMTk4MzYyNDEsODM2ODk3MzcxLC0xODQzNDY1
-MjMyLDE0OTA5OTE5OTgsMTEwMTUwOTUyNF19
+eyJoaXN0b3J5IjpbNjEyNzEwOTksODQ0MzQyNzI5LC0yMDUxNT
+AxNjYsLTE3NzE0NzMxMzgsMjA1MDEwODUxMywtMTk2ODM1MDcz
+Niw3MzEyOTk2MzAsOTQzMzYyNzMyLC03MjUzNDI2MzcsMTAwNz
+M5NDU0MSwxMTk4MzYyNDEsODM2ODk3MzcxLC0xODQzNDY1MjMy
+LDE0OTA5OTE5OTgsMTEwMTUwOTUyNF19
 -->
