@@ -167,8 +167,7 @@ python3 manage.py migrate
 ```
 
 # 8 管理员
-- 创建一个
-(base) yunfei:mysite j00226207$ python manage.py createsuperuser
+- 创建一个管理员账号, `python3 manage.py createsuperuser`
 
 You have 1 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): polls.
 Run 'python manage.py migrate' to apply them.
@@ -183,7 +182,7 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDUzODMwMTMsODQ0MzQyNzI5LC0yMD
+eyJoaXN0b3J5IjpbLTEzMjMwNDY3ODYsODQ0MzQyNzI5LC0yMD
 UxNTAxNjYsLTE3NzE0NzMxMzgsMjA1MDEwODUxMywtMTk2ODM1
 MDczNiw3MzEyOTk2MzAsOTQzMzYyNzMyLC03MjUzNDI2MzcsMT
 AwNzM5NDU0MSwxMTk4MzYyNDEsODM2ODk3MzcxLC0xODQzNDY1
