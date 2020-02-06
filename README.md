@@ -171,14 +171,14 @@ python3 manage.py migrate
 ```
 python3 manage.py createsuperuser
 ```
-- 
+- 在浏览器中使用管理员账号登录  [http://localhost:8000/admin/](http://localhost:8000/admin/)
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEyNzEwOTksODQ0MzQyNzI5LC0yMDUxNT
-AxNjYsLTE3NzE0NzMxMzgsMjA1MDEwODUxMywtMTk2ODM1MDcz
-Niw3MzEyOTk2MzAsOTQzMzYyNzMyLC03MjUzNDI2MzcsMTAwNz
-M5NDU0MSwxMTk4MzYyNDEsODM2ODk3MzcxLC0xODQzNDY1MjMy
-LDE0OTA5OTE5OTgsMTEwMTUwOTUyNF19
+eyJoaXN0b3J5IjpbODc1Njk2MTk3LDg0NDM0MjcyOSwtMjA1MT
+UwMTY2LC0xNzcxNDczMTM4LDIwNTAxMDg1MTMsLTE5NjgzNTA3
+MzYsNzMxMjk5NjMwLDk0MzM2MjczMiwtNzI1MzQyNjM3LDEwMD
+czOTQ1NDEsMTE5ODM2MjQxLDgzNjg5NzM3MSwtMTg0MzQ2NTIz
+MiwxNDkwOTkxOTk4LDExMDE1MDk1MjRdfQ==
 -->
