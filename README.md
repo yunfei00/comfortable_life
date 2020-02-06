@@ -140,7 +140,7 @@ pymysql.install_as_MySQLdb()
 
 3. 其中一些应用程序至少使用了一个数据库表，因此我们需要在使用它们之前在数据库中创建表。为此，请运行以下命令：
 	```
-	python manage.py migrate
+	python3 manage.py migrate
 	```
 	该migrate命令查看INSTALLED_APPS设置并根据mysite/settings.py文件中的数据库设置和应用程序附带的数据库迁移创建任何必要的数据库表。
 
@@ -160,6 +160,10 @@ class Choice(models.Model):
 ```
 python manage.py makemigrations polls
 ```
+运行以下命令在数据库中创建数据表：
+	```
+	python3 manage.py migrate
+```
 
 # 8 管理员
 (base) yunfei:mysite j00226207$ python manage.py createsuperuser
@@ -177,9 +181,9 @@ Superuser created successfully.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ0MzQyNzI5LC0yMDUxNTAxNjYsLTE3Nz
-E0NzMxMzgsMjA1MDEwODUxMywtMTk2ODM1MDczNiw3MzEyOTk2
-MzAsOTQzMzYyNzMyLC03MjUzNDI2MzcsMTAwNzM5NDU0MSwxMT
-k4MzYyNDEsODM2ODk3MzcxLC0xODQzNDY1MjMyLDE0OTA5OTE5
-OTgsMTEwMTUwOTUyNF19
+eyJoaXN0b3J5IjpbMTI5MjU3MjkwMiw4NDQzNDI3MjksLTIwNT
+E1MDE2NiwtMTc3MTQ3MzEzOCwyMDUwMTA4NTEzLC0xOTY4MzUw
+NzM2LDczMTI5OTYzMCw5NDMzNjI3MzIsLTcyNTM0MjYzNywxMD
+A3Mzk0NTQxLDExOTgzNjI0MSw4MzY4OTczNzEsLTE4NDM0NjUy
+MzIsMTQ5MDk5MTk5OCwxMTAxNTA5NTI0XX0=
 -->
